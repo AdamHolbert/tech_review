@@ -1,7 +1,24 @@
-﻿namespace StargateAPI.Business.Dtos
+﻿using StargateAPI.Business.Data;
+
+namespace StargateAPI.Business.Dtos
 {
     public class PersonAstronaut
     {
+        public PersonAstronaut() { }
+        public PersonAstronaut(Person person, AstronautDetail? astronautDetail) : this()
+        {
+
+            PersonId = person.Id;
+            Name = person.Name;
+            if(astronautDetail != null)
+            {
+                CurrentRank = astronautDetail.CurrentRank;
+                CurrentDutyTitle = astronautDetail.CurrentDutyTitle;
+                CareerEndDate = astronautDetail.CareerEndDate;
+                CareerStartDate = astronautDetail.CareerStartDate;
+            }
+        }
+
         public int PersonId { get; set; }
 
         public string Name { get; set; } = string.Empty;
