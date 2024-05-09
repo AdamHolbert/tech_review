@@ -3,3 +3,6 @@
 tech_exercise/api/obj
 /tech_exercise/api/StargateAPI.csproj.user
 tech_exercise/api/bin
+/tech_exercise/api/starbase.db
+/tech_exercise/api/starbase.db-shm
+/tech_exercise/api/starbase.db-wal
